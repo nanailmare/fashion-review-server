@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: fashion-api
+    name: fashion-review-server
     env: node
     plan: free
-    buildCommand: "npm install"
-    startCommand: "npm start"
-    envVars:
-      - key: MONGO_URI
-        value: your_mongodb_atlas_connection_string
-    rootDir: server
+    repo: https://github.com/nanailmare/fashion-review-server
+    branch: main
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node index.js  # 또는 npm start, app.js 등 실제 진입점으로 수정
+    autoDeploy: true
