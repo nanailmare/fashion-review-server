@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fashion-api
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_atlas_connection_string
+    rootDir: server
