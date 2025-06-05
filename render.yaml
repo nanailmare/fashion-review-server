@@ -7,5 +7,5 @@ services:
     branch: main
     rootDir: server
     buildCommand: npm install
-    startCommand: node index.js  # 또는 app.js 등 실제 실행할 서버 파일명
+    startCommand: node index.js   # 또는 app.js 등 진입점
     autoDeploy: true
